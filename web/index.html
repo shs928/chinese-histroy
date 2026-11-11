@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中华历史 · Blessing Hub</title>
+<meta name="description" content="在山河之间读懂中华千年。探索历代疆域、帝王谱系、思想源流、诗词、古代工艺与神话。">
+<meta name="theme-color" content="#f7f7f3">
+<link rel="icon" href="hub-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css?v=gapp15">
+<link rel="stylesheet" href="hub-theme.css?v=1">
+<script src="hub-theme.js?v=1"></script>
+<script src="hub-shell.js?v=1" defer></script>
+</head>
+<body>
+<div id="global-loader">
+  <div class="gl-spinner"></div>
+  <div class="gl-text">正在加载<span class="gl-dots"></span></div>
+</div>
+<div id="app">
+
+  <!-- 左侧大模块切换栏 -->
+  <aside class="mega-sidebar">
+    <button class="mega-collapse-btn" id="sidebar-toggle" aria-label="收起侧栏" aria-expanded="true" title="卷收侧栏">
+      <svg class="caret" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <!-- 半掩的古代门扉 -->
+        <rect x="4" y="4" width="7" height="16" rx="1"/>
+        <circle cx="9" cy="12" r="0.8" fill="currentColor"/>
+        <path d="M11 4 L18 7 L18 17 L11 20"/>
+      </svg>
+      <span class="label">卷收</span>
+    </button>
+    <a class="mega-logo hub-brand" href="https://blessingshs.cc.cd/" title="返回 Blessing Hub">
+      <span class="hub-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="hub-brand-text">Blessing <b>Hub</b><small>让好工具与好知识相遇</small></span>
+    </a>
+    <div class="hub-nav-label">知识与探索</div>
+
+    <!-- 模块按钮由 app.js 依 modules.json 动态生成（见 renderModuleList），此处不再硬编码 -->
+
+    <!-- 模块管理：停用/启用板块 -->
+    <div class="mega-support">
+      <button class="support-btn" id="modules-btn" aria-haspopup="true" aria-expanded="false" title="模块管理">
+        <span class="support-icon"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><rect x="1.6" y="1.8" width="12.8" height="3.1" rx="1" fill="currentColor" opacity=".5"/><rect x="1.6" y="6.45" width="12.8" height="3.1" rx="1" fill="currentColor" opacity=".75"/><rect x="1.6" y="11.1" width="12.8" height="3.1" rx="1" fill="currentColor"/></svg></span><span>模块管理</span>
+      </button>
+      <div class="support-pop hidden" id="modules-pop" role="dialog" aria-label="模块管理">
+        <div class="support-pop-head">
+          <span class="support-pop-star"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.6" y="1.8" width="12.8" height="3.1" rx="1" fill="currentColor" opacity=".5"/><rect x="1.6" y="6.45" width="12.8" height="3.1" rx="1" fill="currentColor" opacity=".75"/><rect x="1.6" y="11.1" width="12.8" height="3.1" rx="1" fill="currentColor"/></svg></span>
+          <b>模块管理</b>
+          <button class="support-pop-close" id="modules-close" aria-label="关闭">✕</button>
+        </div>
+        <p class="support-pop-text">
+          停用的模块不会显示在侧栏，也不会加载它的资源。数据仍留在仓库里，随时可以再启用。
+        </p>
+        <div id="modules-list" class="modules-list"></div>
+        <button class="create-save modules-reset" id="modules-reset">恢复全部模块</button>
+      </div>
+    </div>
+
+    <!-- 导览设置：朗读 / 文本推进两个开关，默认全关；这是网页自带功能，与 AI 讲解无关 -->
+    <div class="mega-support">
+      <button class="support-btn" id="guide-btn" aria-haspopup="true" aria-expanded="false" title="导览设置">
+        <span class="support-icon"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2 6.2h2.6L8.4 3v10L4.6 9.8H2z" fill="currentColor"/><path d="M10.6 5.8a3 3 0 0 1 0 4.4M12.4 4a5.6 5.6 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span><span>导览设置</span>
+      </button>
+      <div class="support-pop hidden" id="guide-pop" role="dialog" aria-label="导览设置">
+        <div class="support-pop-head">
+          <span class="support-pop-star"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 6.2h2.6L8.4 3v10L4.6 9.8H2z" fill="currentColor"/><path d="M10.6 5.8a3 3 0 0 1 0 4.4M12.4 4a5.6 5.6 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+          <b>导览设置</b>
+          <button class="support-pop-close" id="guide-close" aria-label="关闭">✕</button>
+        </div>
+        <p class="support-pop-text">
+          默认全关：页面就是普通的静态网页。开启后，点正文任意一句即从该句开始自动推进（可按需朗读）。
+        </p>
+        <label class="guide-item">
+          <input type="checkbox" id="guide-speech" />
+          <span class="guide-item-body">
+            <b>朗读功能</b>
+            <i>用浏览器自带语音逐句朗读，念完一句自动跳下一句（节奏来自真实语音时长）</i>
+          </span>
+        </label>
+        <label class="guide-item">
+          <input type="checkbox" id="guide-dwell" />
+          <span class="guide-item-body">
+            <b>文本推进</b>
+            <i>不朗读，只按句子长度自动切换高亮，可配合 AI 导读，也可单独使用</i>
+          </span>
+        </label>
+        <p class="support-pop-text guide-hint" id="guide-hint"></p>
+      </div>
+    </div>
+
+    <!-- AI 老师配置：三个板块共用，放在侧栏「支持」上方；
+         展开卡片与「支持」同款（点击展开、点外部关闭），内容由 app.js 的 renderDetectiveAI() 注入 -->
+    <div class="mega-support">
+      <button class="support-btn" id="ai-sidebar-btn" aria-haspopup="true" aria-expanded="false" title="AI 老师配置">
+        <span class="support-icon"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><rect x="2.2" y="5.2" width="11.6" height="8" rx="2.2" fill="currentColor" opacity=".85"/><circle cx="5.7" cy="8.9" r="1.15" fill="#fff"/><circle cx="10.3" cy="8.9" r="1.15" fill="#fff"/><path d="M8 5.2V2.9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="2.3" r="1.05" fill="currentColor"/></svg></span><span>AI 配置</span>
+      </button>
+      <div class="support-pop hidden" id="ai-sidebar-pop" role="dialog" aria-label="AI 老师配置">
+        <div class="support-pop-head">
+          <span class="support-pop-star"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="2.2" y="5.2" width="11.6" height="8" rx="2.2" fill="currentColor" opacity=".85"/><circle cx="5.7" cy="8.9" r="1.15" fill="#fff"/><circle cx="10.3" cy="8.9" r="1.15" fill="#fff"/><path d="M8 5.2V2.9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="2.3" r="1.05" fill="currentColor"/></svg></span>
+          <b>AI 老师配置</b>
+          <button class="support-pop-close" id="ai-sidebar-close" aria-label="关闭">✕</button>
+        </div>
+        <p class="support-pop-text">
+          填入 OpenAI 兼容接口地址、API Key 与模型，问答即可使用 AI 老师点评。配置只保存在本机，不上传任何服务器。
+        </p>
+        <div id="detective-ai" class="detective-ai"></div>
+      </div>
+    </div>
+
+    <!-- 支持：三个板块共用，样式与交互保持原样（hover 展开卡片），只是位置改到侧栏底部 -->
+    <div class="mega-support">
+      <button class="support-btn" id="support-btn" aria-haspopup="true" aria-expanded="false" title="支持这个项目">
+        <span class="support-icon"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.4l-3.8 2 .7-4.3-3.1-3 4.3-.6z" fill="currentColor"/></svg></span><span>点赞支持</span>
+      </button>
+      <div class="support-pop hidden" id="support-pop" role="dialog" aria-label="支持这个项目">
+        <div class="support-pop-head">
+          <span class="support-pop-star"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1.6l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.4l-3.8 2 .7-4.3-3.1-3 4.3-.6z" fill="currentColor"/></svg></span>
+          <b>免费支持</b>
+          <button class="support-pop-close" id="support-close" aria-label="关闭">✕</button>
+        </div>
+        <p class="support-pop-text">
+          如果这个网站对你有帮助，欢迎给「中华历史」点个 Star，关注后续更新。
+        </p>
+        <a class="support-pop-gh" href="https://github.com/shs928/chinese-histroy" target="_blank" rel="noopener noreferrer">
+          GitHub Star
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <header class="hub-topbar">
+    <div class="hub-breadcrumb">知识与探索 <span>/</span> <strong id="hub-current-title">探索首页</strong></div>
+    <a class="hub-back-link" href="https://blessingshs.cc.cd/" aria-label="返回 Hub 主站"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg><span>返回 Hub 主站</span></a>
+    <form id="hub-search" role="search"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5"/></svg><input name="q" aria-label="搜索地图人物、地名或年号" placeholder="搜索人物、地名、年号…"><button type="submit" aria-label="搜索地图">↵</button></form>
+    <button id="hub-theme-toggle" class="hub-theme-toggle" aria-label="切换深色主题" title="切换主题">◐</button>
+  </header>
+
+  <!-- 帝王谱系模块（原 dsh_his）。正文包在 .module-inner 里，与典籍长河 #app 用同一套宽度数学 -->
+  <div class="mega-area" id="mega-history">
+  <div class="module-inner">
+  <header class="topbar">
+    <div class="brand" id="brand">帝王谱系</div>
+    <div class="dynasty-switch" id="dynasty-switch" role="tablist" aria-label="朝代切换">
+      <button class="dynasty-btn active" data-d="all"><span class="dyn-top">全部</span><span class="dyn-sub"></span></button>
+      <button class="dynasty-btn" data-d="sui"><span class="dyn-top">隋<span class="dyn-year">581-618</span></span><span class="dyn-sub"></span></button>
+      <button class="dynasty-btn" data-d="tang"><span class="dyn-top">唐<span class="dyn-year">618-907</span></span><span class="dyn-sub"></span></button>
+      <button class="dynasty-btn" data-d="wudai"><span class="dyn-top">五代<span class="dyn-year">907-960</span></span><span class="dyn-sub"></span></button>
+      <button class="dynasty-btn" data-d="song"><span class="dyn-top">宋<span class="dyn-year">960-1279</span></span><span class="dyn-sub"></span></button>
+      <button class="dynasty-btn" data-d="yuan"><span class="dyn-top">元<span class="dyn-year">1271-1368</span></span><span class="dyn-sub"></span></button>
+      <button class="dynasty-btn" data-d="ming"><span class="dyn-top">明<span class="dyn-year">1368-1644</span></span><span class="dyn-sub"></span></button>
+      <button class="dynasty-btn" data-d="qing"><span class="dyn-top">清<span class="dyn-year">1616-1912</span></span><span class="dyn-sub"></span></button>
+    </div>
+    <nav class="tabs">
+      <button class="tab active" data-page="timeline">帝王世系</button>
+      <button class="tab" data-page="cases">悬案疑案</button>
+      <button class="tab" data-page="map">舆图疆域</button>
+      <button class="tab" data-page="detective">探案问史</button>
+    </nav>
+  </header>
+
+  <!-- 界面一：时间线首页（朝代与帝数已在顶部朝代胶囊内展示） -->
+  <main id="page-timeline" class="page">
+    <div class="timeline-wrap">
+      <button class="timeline-arrow prev" id="tl-prev" aria-label="上一批">◀</button>
+      <div id="timeline-scroll" class="timeline-scroll"></div>
+      <button class="timeline-arrow next" id="tl-next" aria-label="下一批">▶</button>
+    </div>
+    <div id="shiguo-gantt" class="shiguo-gantt hidden"></div>
+    <div id="emperor-detail" class="emperor-detail hidden"></div>
+  </main>
+
+  <!-- 界面二：案件卡 -->
+  <main id="page-cases" class="page hidden">
+    <div id="case-tabs" class="case-tabs" role="tablist"></div>
+    <div id="cases-list" class="cases-list"></div>
+  </main>
+
+  <!-- 界面三：地图探索页 -->
+  <main id="page-map" class="page hidden">
+    <div class="timeline-wrap">
+      <button class="timeline-arrow prev" id="era-prev" aria-label="上一个年号">◀</button>
+      <div id="era-strip" class="era-strip"></div>
+      <button class="timeline-arrow next" id="era-next" aria-label="下一个年号">▶</button>
+    </div>
+    <div id="era-info" class="era-info hidden"></div>
+    <div class="map-wrap">
+      <div id="map-leaf" role="img" aria-label="示意地图"></div>
+      <div class="map-legend map-legend-float">
+        <span class="legend-item"><i class="dot dot-capital"></i>首都</span>
+        <span class="legend-item"><i class="dot dot-city"></i>城市</span>
+        <span class="legend-item"><i class="dot dot-site"></i>名胜古迹</span>
+        <span class="legend-item"><span class="event-badge"><i>⚑</i>地名</span>事件古地名</span>
+        <span class="legend-item"><i class="dot dot-route-start"></i>路线起点</span>
+        <span class="legend-item"><i class="dot dot-route-end"></i>路线终点</span>
+      </div>
+      <div id="map-popup" class="map-popup hidden"></div>
+    </div>
+  </main>
+
+  <!-- 界面四：历史侦探任务页 -->
+  <main id="page-detective" class="page hidden">
+    <h2 class="page-title">历史侦探任务</h2>
+    <div id="detective-week" class="detective-week"></div>
+    <div id="detective-clues" class="detective-clues"></div>
+    <div id="detective-create" class="detective-create"></div>
+    <div id="detective-ask" class="detective-ask"></div>
+    <!-- AI 老师配置已移到左侧模块栏（与「支持」并列），此处不再重复 -->
+  </main>
+
+  <footer class="footer" id="footer">疆域轮廓据《明史·地理志》示意，非精确边界 · 皇帝画像为 AI 生成工笔风格，仅供示意 · 内容以《明史》《明实录》为主要依据</footer>
+  </div><!-- /module-inner -->
+  </div><!-- /mega-history -->
+
+  <!-- 典籍长河模块（国学图谱）：iframe 延迟到首次进入时才建，省掉首屏约 230KB 传输与一份 Leaflet 解析 -->
+  <div class="mega-area hidden" id="mega-guoxue">
+    <iframe id="guoxue-frame" class="guoxue-frame" title="典籍长河" frameborder="0"></iframe>
+  </div>
+
+  <!-- 诗词鉴赏模块（第三个板块）：复用国学图谱全部代码与样式，仅锁定为诗文流派（无流派切换条） -->
+  <div class="mega-area hidden" id="mega-shici">
+    <iframe id="shici-frame" class="guoxue-frame" title="诗词鉴赏" frameborder="0"></iframe>
+  </div>
+
+</div>
+<script src="search-core.js?v=sc6"></script>
+<script>window.__dbg={};</script>
+<script src="app.js?v=gapp15"></script>
+<script src="guide-highlight.js?v=gh8"></script>
+</body>
+</html>

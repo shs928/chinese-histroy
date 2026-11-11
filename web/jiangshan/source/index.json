@@ -1,0 +1,806 @@
+{
+  "license": "GPL-3.0; Jiangshan Atlas, CHGIS layer excluded",
+  "bootKeys": [
+    "neighbors",
+    "s_zhanguo_a",
+    "s_qin_a"
+  ],
+  "snapshots": [
+    {
+      "key": "neighbors",
+      "file": "snapshots/neighbors.json"
+    },
+    {
+      "key": "s_zhanguo_a",
+      "file": "snapshots/s_zhanguo_a.json"
+    },
+    {
+      "key": "s_qin_a",
+      "file": "snapshots/s_qin_a.json"
+    },
+    {
+      "key": "s_zhanguo_b",
+      "file": "snapshots/s_zhanguo_b.json"
+    },
+    {
+      "key": "s_zhanguo_c",
+      "file": "snapshots/s_zhanguo_c.json"
+    },
+    {
+      "key": "s_zhanguo_d",
+      "file": "snapshots/s_zhanguo_d.json"
+    },
+    {
+      "key": "s_zhanguo_e1",
+      "file": "snapshots/s_zhanguo_e1.json"
+    },
+    {
+      "key": "s_zhanguo_e2",
+      "file": "snapshots/s_zhanguo_e2.json"
+    },
+    {
+      "key": "s_zhanguo_e3",
+      "file": "snapshots/s_zhanguo_e3.json"
+    },
+    {
+      "key": "s_zhanguo_e4",
+      "file": "snapshots/s_zhanguo_e4.json"
+    },
+    {
+      "key": "s_zhanguo_e5",
+      "file": "snapshots/s_zhanguo_e5.json"
+    },
+    {
+      "key": "s_beisong_a",
+      "file": "snapshots/s_beisong_a.json"
+    },
+    {
+      "key": "s_beisong_b",
+      "file": "snapshots/s_beisong_b.json"
+    },
+    {
+      "key": "s_donghan",
+      "file": "snapshots/s_donghan.json"
+    },
+    {
+      "key": "s_dongjin_a",
+      "file": "snapshots/s_dongjin_a.json"
+    },
+    {
+      "key": "s_dongjin_b",
+      "file": "snapshots/s_dongjin_b.json"
+    },
+    {
+      "key": "s_dongjin_c",
+      "file": "snapshots/s_dongjin_c.json"
+    },
+    {
+      "key": "s_dongjin_d",
+      "file": "snapshots/s_dongjin_d.json"
+    },
+    {
+      "key": "s_ming_a",
+      "file": "snapshots/s_ming_a.json"
+    },
+    {
+      "key": "s_ming_b0",
+      "file": "snapshots/s_ming_b0.json"
+    },
+    {
+      "key": "s_ming_b",
+      "file": "snapshots/s_ming_b.json"
+    },
+    {
+      "key": "s_ming_c",
+      "file": "snapshots/s_ming_c.json"
+    },
+    {
+      "key": "s_nanbei_0",
+      "file": "snapshots/s_nanbei_0.json"
+    },
+    {
+      "key": "s_nanbei_a",
+      "file": "snapshots/s_nanbei_a.json"
+    },
+    {
+      "key": "s_nanbei_b",
+      "file": "snapshots/s_nanbei_b.json"
+    },
+    {
+      "key": "s_nanbei_c",
+      "file": "snapshots/s_nanbei_c.json"
+    },
+    {
+      "key": "s_nanbei_d",
+      "file": "snapshots/s_nanbei_d.json"
+    },
+    {
+      "key": "s_nanbei_e",
+      "file": "snapshots/s_nanbei_e.json"
+    },
+    {
+      "key": "s_nansong_a",
+      "file": "snapshots/s_nansong_a.json"
+    },
+    {
+      "key": "s_nansong_b",
+      "file": "snapshots/s_nansong_b.json"
+    },
+    {
+      "key": "s_prc",
+      "file": "snapshots/s_prc.json"
+    },
+    {
+      "key": "s_qin",
+      "file": "snapshots/s_qin.json"
+    },
+    {
+      "key": "s_qing_a",
+      "file": "snapshots/s_qing_a.json"
+    },
+    {
+      "key": "s_qing_b",
+      "file": "snapshots/s_qing_b.json"
+    },
+    {
+      "key": "s_qing_c",
+      "file": "snapshots/s_qing_c.json"
+    },
+    {
+      "key": "s_qing_d",
+      "file": "snapshots/s_qing_d.json"
+    },
+    {
+      "key": "s_qing_e",
+      "file": "snapshots/s_qing_e.json"
+    },
+    {
+      "key": "s_qing_f",
+      "file": "snapshots/s_qing_f.json"
+    },
+    {
+      "key": "s_roc",
+      "file": "snapshots/s_roc.json"
+    },
+    {
+      "key": "s_sanguo",
+      "file": "snapshots/s_sanguo.json"
+    },
+    {
+      "key": "s_sui",
+      "file": "snapshots/s_sui.json"
+    },
+    {
+      "key": "s_tang_a",
+      "file": "snapshots/s_tang_a.json"
+    },
+    {
+      "key": "s_tang_a6",
+      "file": "snapshots/s_tang_a6.json"
+    },
+    {
+      "key": "s_tang_a7",
+      "file": "snapshots/s_tang_a7.json"
+    },
+    {
+      "key": "s_tang_wz0",
+      "file": "snapshots/s_tang_wz0.json"
+    },
+    {
+      "key": "s_tang_wz1",
+      "file": "snapshots/s_tang_wz1.json"
+    },
+    {
+      "key": "s_tang_wz1b",
+      "file": "snapshots/s_tang_wz1b.json"
+    },
+    {
+      "key": "s_tang_wz2",
+      "file": "snapshots/s_tang_wz2.json"
+    },
+    {
+      "key": "s_tang_b",
+      "file": "snapshots/s_tang_b.json"
+    },
+    {
+      "key": "s_xihan_a",
+      "file": "snapshots/s_xihan_a.json"
+    },
+    {
+      "key": "s_xihan_b",
+      "file": "snapshots/s_xihan_b.json"
+    },
+    {
+      "key": "s_xihan_c",
+      "file": "snapshots/s_xihan_c.json"
+    },
+    {
+      "key": "s_xijin",
+      "file": "snapshots/s_xijin.json"
+    },
+    {
+      "key": "s_yuan",
+      "file": "snapshots/s_yuan.json"
+    },
+    {
+      "key": "s_qin_b",
+      "file": "snapshots/s_qin_b.json"
+    },
+    {
+      "key": "s_xihan_b1",
+      "file": "snapshots/s_xihan_b1.json"
+    },
+    {
+      "key": "s_xihan_b2",
+      "file": "snapshots/s_xihan_b2.json"
+    },
+    {
+      "key": "s_xihan_b3",
+      "file": "snapshots/s_xihan_b3.json"
+    },
+    {
+      "key": "s_xihan_d",
+      "file": "snapshots/s_xihan_d.json"
+    },
+    {
+      "key": "s_donghan_a",
+      "file": "snapshots/s_donghan_a.json"
+    },
+    {
+      "key": "s_donghan_b",
+      "file": "snapshots/s_donghan_b.json"
+    },
+    {
+      "key": "s_donghan_b2",
+      "file": "snapshots/s_donghan_b2.json"
+    },
+    {
+      "key": "s_donghan_c",
+      "file": "snapshots/s_donghan_c.json"
+    },
+    {
+      "key": "s_donghan_e",
+      "file": "snapshots/s_donghan_e.json"
+    },
+    {
+      "key": "s_sanguo_b",
+      "file": "snapshots/s_sanguo_b.json"
+    },
+    {
+      "key": "s_sanguo_c",
+      "file": "snapshots/s_sanguo_c.json"
+    },
+    {
+      "key": "s_xijin_a",
+      "file": "snapshots/s_xijin_a.json"
+    },
+    {
+      "key": "s_xijin_b",
+      "file": "snapshots/s_xijin_b.json"
+    },
+    {
+      "key": "s_dongjin_a2",
+      "file": "snapshots/s_dongjin_a2.json"
+    },
+    {
+      "key": "s_dongjin_e",
+      "file": "snapshots/s_dongjin_e.json"
+    },
+    {
+      "key": "s_dongjin_f",
+      "file": "snapshots/s_dongjin_f.json"
+    },
+    {
+      "key": "s_nanbei_0b",
+      "file": "snapshots/s_nanbei_0b.json"
+    },
+    {
+      "key": "s_nanbei_0c",
+      "file": "snapshots/s_nanbei_0c.json"
+    },
+    {
+      "key": "s_nanbei_d2",
+      "file": "snapshots/s_nanbei_d2.json"
+    },
+    {
+      "key": "s_nanbei_f",
+      "file": "snapshots/s_nanbei_f.json"
+    },
+    {
+      "key": "s_sui_a",
+      "file": "snapshots/s_sui_a.json"
+    },
+    {
+      "key": "s_sui_c",
+      "file": "snapshots/s_sui_c.json"
+    },
+    {
+      "key": "s_tang_a0",
+      "file": "snapshots/s_tang_a0.json"
+    },
+    {
+      "key": "s_tang_a1",
+      "file": "snapshots/s_tang_a1.json"
+    },
+    {
+      "key": "s_tang_a2",
+      "file": "snapshots/s_tang_a2.json"
+    },
+    {
+      "key": "s_tang_a3",
+      "file": "snapshots/s_tang_a3.json"
+    },
+    {
+      "key": "s_tang_a3b",
+      "file": "snapshots/s_tang_a3b.json"
+    },
+    {
+      "key": "s_tang_a4",
+      "file": "snapshots/s_tang_a4.json"
+    },
+    {
+      "key": "s_tang_a4b",
+      "file": "snapshots/s_tang_a4b.json"
+    },
+    {
+      "key": "s_tang_a5z",
+      "file": "snapshots/s_tang_a5z.json"
+    },
+    {
+      "key": "s_tang_a5y",
+      "file": "snapshots/s_tang_a5y.json"
+    },
+    {
+      "key": "s_tang_a5",
+      "file": "snapshots/s_tang_a5.json"
+    },
+    {
+      "key": "s_tang_b1",
+      "file": "snapshots/s_tang_b1.json"
+    },
+    {
+      "key": "s_tang_c",
+      "file": "snapshots/s_tang_c.json"
+    },
+    {
+      "key": "s_wudai_a",
+      "file": "snapshots/s_wudai_a.json"
+    },
+    {
+      "key": "s_wudai_b1",
+      "file": "snapshots/s_wudai_b1.json"
+    },
+    {
+      "key": "s_wudai_b",
+      "file": "snapshots/s_wudai_b.json"
+    },
+    {
+      "key": "s_wudai_b2",
+      "file": "snapshots/s_wudai_b2.json"
+    },
+    {
+      "key": "s_wudai_c",
+      "file": "snapshots/s_wudai_c.json"
+    },
+    {
+      "key": "s_wudai_d",
+      "file": "snapshots/s_wudai_d.json"
+    },
+    {
+      "key": "s_wudai_e",
+      "file": "snapshots/s_wudai_e.json"
+    },
+    {
+      "key": "s_beisong_a0",
+      "file": "snapshots/s_beisong_a0.json"
+    },
+    {
+      "key": "s_beisong_a2",
+      "file": "snapshots/s_beisong_a2.json"
+    },
+    {
+      "key": "s_beisong_a3",
+      "file": "snapshots/s_beisong_a3.json"
+    },
+    {
+      "key": "s_beisong_a4",
+      "file": "snapshots/s_beisong_a4.json"
+    },
+    {
+      "key": "s_beisong_a5",
+      "file": "snapshots/s_beisong_a5.json"
+    },
+    {
+      "key": "s_beisong_b0",
+      "file": "snapshots/s_beisong_b0.json"
+    },
+    {
+      "key": "s_beisong_c",
+      "file": "snapshots/s_beisong_c.json"
+    },
+    {
+      "key": "s_beisong_d",
+      "file": "snapshots/s_beisong_d.json"
+    },
+    {
+      "key": "s_nansong_b0",
+      "file": "snapshots/s_nansong_b0.json"
+    },
+    {
+      "key": "s_nansong_c",
+      "file": "snapshots/s_nansong_c.json"
+    },
+    {
+      "key": "s_nansong_d",
+      "file": "snapshots/s_nansong_d.json"
+    },
+    {
+      "key": "s_nansong_e",
+      "file": "snapshots/s_nansong_e.json"
+    },
+    {
+      "key": "s_nansong_g",
+      "file": "snapshots/s_nansong_g.json"
+    },
+    {
+      "key": "s_yuan_b",
+      "file": "snapshots/s_yuan_b.json"
+    },
+    {
+      "key": "s_ming_a0",
+      "file": "snapshots/s_ming_a0.json"
+    },
+    {
+      "key": "s_qing_a2",
+      "file": "snapshots/s_qing_a2.json"
+    },
+    {
+      "key": "s_qing_b1",
+      "file": "snapshots/s_qing_b1.json"
+    },
+    {
+      "key": "s_qing_e2",
+      "file": "snapshots/s_qing_e2.json"
+    },
+    {
+      "key": "s_qing_g",
+      "file": "snapshots/s_qing_g.json"
+    },
+    {
+      "key": "s_roc_a",
+      "file": "snapshots/s_roc_a.json"
+    },
+    {
+      "key": "s_roc_c",
+      "file": "snapshots/s_roc_c.json"
+    },
+    {
+      "key": "s_beisong_b1",
+      "file": "snapshots/s_beisong_b1.json"
+    },
+    {
+      "key": "s_nansong_a0",
+      "file": "snapshots/s_nansong_a0.json"
+    },
+    {
+      "key": "s_wudai_c2",
+      "file": "snapshots/s_wudai_c2.json"
+    },
+    {
+      "key": "s_wudai_e2",
+      "file": "snapshots/s_wudai_e2.json"
+    },
+    {
+      "key": "s_dongjin_a0",
+      "file": "snapshots/s_dongjin_a0.json"
+    },
+    {
+      "key": "s_dongjin_b2",
+      "file": "snapshots/s_dongjin_b2.json"
+    },
+    {
+      "key": "s_dongjin_373",
+      "file": "snapshots/s_dongjin_373.json"
+    },
+    {
+      "key": "s_tang_b0a",
+      "file": "snapshots/s_tang_b0a.json"
+    },
+    {
+      "key": "s_tang_b0b",
+      "file": "snapshots/s_tang_b0b.json"
+    },
+    {
+      "key": "s_tang_b0",
+      "file": "snapshots/s_tang_b0.json"
+    },
+    {
+      "key": "s_qing_a0",
+      "file": "snapshots/s_qing_a0.json"
+    },
+    {
+      "key": "s_qing_a1",
+      "file": "snapshots/s_qing_a1.json"
+    },
+    {
+      "key": "s_qing_e3",
+      "file": "snapshots/s_qing_e3.json"
+    },
+    {
+      "key": "s_donghan_d",
+      "file": "snapshots/s_donghan_d.json"
+    },
+    {
+      "key": "s_donghan_f",
+      "file": "snapshots/s_donghan_f.json"
+    },
+    {
+      "key": "s_sui_d",
+      "file": "snapshots/s_sui_d.json"
+    },
+    {
+      "key": "s_tang_0",
+      "file": "snapshots/s_tang_0.json"
+    },
+    {
+      "key": "s_yuan_c",
+      "file": "snapshots/s_yuan_c.json"
+    },
+    {
+      "key": "s_ming_0a",
+      "file": "snapshots/s_ming_0a.json"
+    },
+    {
+      "key": "s_ming_0b",
+      "file": "snapshots/s_ming_0b.json"
+    },
+    {
+      "key": "s_ming_0c",
+      "file": "snapshots/s_ming_0c.json"
+    },
+    {
+      "key": "s_ming_0d",
+      "file": "snapshots/s_ming_0d.json"
+    },
+    {
+      "key": "s_ming_a2",
+      "file": "snapshots/s_ming_a2.json"
+    },
+    {
+      "key": "s_beisong_b2",
+      "file": "snapshots/s_beisong_b2.json"
+    },
+    {
+      "key": "s_qing_e4",
+      "file": "snapshots/s_qing_e4.json"
+    },
+    {
+      "key": "s_xijin_a2",
+      "file": "snapshots/s_xijin_a2.json"
+    },
+    {
+      "key": "s_dongjin_d0",
+      "file": "snapshots/s_dongjin_d0.json"
+    },
+    {
+      "key": "s_dongjin_d1",
+      "file": "snapshots/s_dongjin_d1.json"
+    },
+    {
+      "key": "s_nanbei_a2",
+      "file": "snapshots/s_nanbei_a2.json"
+    },
+    {
+      "key": "s_nanbei_d1",
+      "file": "snapshots/s_nanbei_d1.json"
+    },
+    {
+      "key": "s_nanbei_e2",
+      "file": "snapshots/s_nanbei_e2.json"
+    },
+    {
+      "key": "s_wudai_c0",
+      "file": "snapshots/s_wudai_c0.json"
+    },
+    {
+      "key": "s_wudai_e1",
+      "file": "snapshots/s_wudai_e1.json"
+    },
+    {
+      "key": "s_donghan_d1",
+      "file": "snapshots/s_donghan_d1.json"
+    },
+    {
+      "key": "s_donghan_d2",
+      "file": "snapshots/s_donghan_d2.json"
+    },
+    {
+      "key": "s_donghan_e0",
+      "file": "snapshots/s_donghan_e0.json"
+    },
+    {
+      "key": "s_zhanguo_b0",
+      "file": "snapshots/s_zhanguo_b0.json"
+    },
+    {
+      "key": "s_donghan_b0",
+      "file": "snapshots/s_donghan_b0.json"
+    },
+    {
+      "key": "s_sanguo_a",
+      "file": "snapshots/s_sanguo_a.json"
+    },
+    {
+      "key": "s_tang_a1b",
+      "file": "snapshots/s_tang_a1b.json"
+    },
+    {
+      "key": "s_tang_a2b",
+      "file": "snapshots/s_tang_a2b.json"
+    },
+    {
+      "key": "s_yuan_a",
+      "file": "snapshots/s_yuan_a.json"
+    },
+    {
+      "key": "s_qing_f0",
+      "file": "snapshots/s_qing_f0.json"
+    },
+    {
+      "key": "s_qing_g0",
+      "file": "snapshots/s_qing_g0.json"
+    },
+    {
+      "key": "s_roc_b0",
+      "file": "snapshots/s_roc_b0.json"
+    },
+    {
+      "key": "s_roc_d",
+      "file": "snapshots/s_roc_d.json"
+    },
+    {
+      "key": "s_qin_chuhan",
+      "file": "snapshots/s_qin_chuhan.json"
+    },
+    {
+      "key": "s_xihan_e",
+      "file": "snapshots/s_xihan_e.json"
+    },
+    {
+      "key": "s_tang_d1",
+      "file": "snapshots/s_tang_d1.json"
+    },
+    {
+      "key": "s_tang_d2",
+      "file": "snapshots/s_tang_d2.json"
+    },
+    {
+      "key": "s_nanbei_d3",
+      "file": "snapshots/s_nanbei_d3.json"
+    },
+    {
+      "key": "s_sui_a2",
+      "file": "snapshots/s_sui_a2.json"
+    },
+    {
+      "key": "s_zhanguo_a2",
+      "file": "snapshots/s_zhanguo_a2.json"
+    },
+    {
+      "key": "s_zhanguo_b1",
+      "file": "snapshots/s_zhanguo_b1.json"
+    },
+    {
+      "key": "s_zhanguo_b2",
+      "file": "snapshots/s_zhanguo_b2.json"
+    },
+    {
+      "key": "s_roc_a0",
+      "file": "snapshots/s_roc_a0.json"
+    },
+    {
+      "key": "s_roc_w1",
+      "file": "snapshots/s_roc_w1.json"
+    },
+    {
+      "key": "s_roc_w2",
+      "file": "snapshots/s_roc_w2.json"
+    },
+    {
+      "key": "s_roc_w3",
+      "file": "snapshots/s_roc_w3.json"
+    },
+    {
+      "key": "s_roc_w4",
+      "file": "snapshots/s_roc_w4.json"
+    },
+    {
+      "key": "s_zhanguo_c2",
+      "file": "snapshots/s_zhanguo_c2.json"
+    },
+    {
+      "key": "s_zhanguo_c3",
+      "file": "snapshots/s_zhanguo_c3.json"
+    },
+    {
+      "key": "s_donghan_e1",
+      "file": "snapshots/s_donghan_e1.json"
+    },
+    {
+      "key": "s_donghan_e2",
+      "file": "snapshots/s_donghan_e2.json"
+    },
+    {
+      "key": "s_ming_c0",
+      "file": "snapshots/s_ming_c0.json"
+    },
+    {
+      "key": "s_ming_c2",
+      "file": "snapshots/s_ming_c2.json"
+    },
+    {
+      "key": "s_qing_a00",
+      "file": "snapshots/s_qing_a00.json"
+    },
+    {
+      "key": "s_qing_a0b",
+      "file": "snapshots/s_qing_a0b.json"
+    },
+    {
+      "key": "s_dongjin_317",
+      "file": "snapshots/s_dongjin_317.json"
+    },
+    {
+      "key": "s_dongjin_350",
+      "file": "snapshots/s_dongjin_350.json"
+    },
+    {
+      "key": "s_dongjin_351",
+      "file": "snapshots/s_dongjin_351.json"
+    },
+    {
+      "key": "s_dongjin_384",
+      "file": "snapshots/s_dongjin_384.json"
+    },
+    {
+      "key": "s_dongjin_385",
+      "file": "snapshots/s_dongjin_385.json"
+    },
+    {
+      "key": "s_dongjin_397",
+      "file": "snapshots/s_dongjin_397.json"
+    },
+    {
+      "key": "s_dongjin_399",
+      "file": "snapshots/s_dongjin_399.json"
+    },
+    {
+      "key": "s_dongjin_404",
+      "file": "snapshots/s_dongjin_404.json"
+    },
+    {
+      "key": "s_dongjin_410",
+      "file": "snapshots/s_dongjin_410.json"
+    },
+    {
+      "key": "s_nanbei_427",
+      "file": "snapshots/s_nanbei_427.json"
+    },
+    {
+      "key": "s_qin_c",
+      "file": "snapshots/s_qin_c.json"
+    },
+    {
+      "key": "s_qin_d",
+      "file": "snapshots/s_qin_d.json"
+    },
+    {
+      "key": "s_xihan_b3a",
+      "file": "snapshots/s_xihan_b3a.json"
+    },
+    {
+      "key": "s_xihan_b3b",
+      "file": "snapshots/s_xihan_b3b.json"
+    }
+  ]
+}

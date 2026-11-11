@@ -1,0 +1,176 @@
+<!-- Do not wrap the heading in an outer <div>: GitHub does not parse Markdown
+     inside HTML block elements, which makes # and ** render as literal text.
+     Use self-aligned HTML tags instead, which stay centered without breaking parsing. -->
+<h1 align="center">🏮 Chinese History Atlas</h1>
+
+<p align="center"><b>Emperor Lineage · Thought Origins · Poetry Appreciation · Natural Sciences — four threads side by side, connecting scattered facts into an era</b></p>
+
+<p align="center">
+<img alt="Pure static" src="https://img.shields.io/badge/pure%20static-zero%20build-brightgreen">
+<img alt="Leaflet" src="https://img.shields.io/badge/maps-Leaflet_1.9.4-247bc1">
+<img alt="Modules" src="https://img.shields.io/badge/modules-4-c0392b">
+<img alt="Data" src="https://img.shields.io/badge/data-77%20emperors_·_27%20classics_·_22%20poets_·_18%20textbooks-e8c86a">
+<a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
+</p>
+
+<p align="center">🌐 <b>Live demo</b>: <a href="https://zinging.github.io/chinese-history-atlas/web/">https://zinging.github.io/chinese-history-atlas/web/</a></p>
+
+---
+
+The most familiar frustration in learning history: you memorize the timeline and forget it, while emperors, thinkers, poets, and craftspeople stay in separate drawers of your mind — a pile of disconnected dots.
+
+This project does one thing about it. **In the same era, what an emperor decided in court, how a thinker responded in their study, what a poet wrote on the road into exile, and what a craftsman built in the workshop unfold as four parallel threads.** What you get is no longer isolated names and dates, but the causes and shape of an era.
+
+- History buffs can build a firm chronological frame;
+- newcomers to traditional culture can trace how Confucianism, Buddhism, and Daoism evolved;
+- students move from "memorizing dates" to "understanding cause and effect";
+- anyone curious about the history of science can follow from *Kao Gong Ji* through *Tiangong Kaiwu* and *Bencao Gangmu*.
+
+---
+
+## 🗺️ Four Modules — Emperor Lineage, Thought Origins, Poetry Appreciation, Natural Sciences
+
+### 🏮 Emperor Lineage
+
+**77 emperors** across seven dynasties (Sui → Qing) on a single horizontal card rail. Open one for the life timeline, relationship graph, fun facts, and controversies. The map overlays each dynasty's approximate borders, ancient place markers, and animated campaign/voyage routes. Famous cases are broken down from naming through open debate, while History Detective hands you sourced clues and lets you reach your own verdict.
+
+![Emperor Lineage](docs/demo/module-emperors.gif)
+
+### 📚 Thought Origins
+
+Confucianism (Kong-Meng), Daoism (Lao-Zhuang), Buddhism (Chan), the Hundred Schools (military / Legalist / Mohist), and Neo-Confucianism / Yangmingism (Zhu Xi / Wang Yangming) — the operating system of Chinese thought, from the pre-Qin through Ming-Qing. Each school offers core classics read **against the author's historical situation**, rather than memorized in a vacuum; critical multiple-choice questions then train reasoning, testing both "how do you judge this?" and "what is the causal chain?"
+
+![Thought Origins](docs/demo/module-thought.gif)
+
+### 🎋 Poetry Appreciation
+
+From Qu Yuan to Nalan Xingde, **22 poets** organized by dynasty. This is not rote memorization — **first trace a poet's life journey on a map, then read the situation, mood, and story behind each verse**. Why did Li Bai write "a light skiff has sailed past ten thousand mountains" at Jiangling? He had just received the amnesty order — spared and heading home, the boat felt that fast. The poetry route map shows where they traveled and where they wrote their famous lines.
+
+![Poetry Appreciation](docs/demo/module-poetry.gif)
+
+### 🧭 Natural Sciences (Ge Wu Zhi Zhi)
+
+18 ancient scientific and technical classics — crafts & architecture (*Kao Gong Ji*, *Yingzao Fashi*, *Tiangong Kaiwu*, *Mengxi Bitan*), medicine & materia medica (*Huangdi Neijing*, *Shanghan Lun*, *Qianjin Fang*, *Bencao Gangmu*), agronomy (*Qimin Yaoshu*, *Nongzheng Quanshu*), mathematics & astronomy (*Jiuzhang Suanshu*, *Zhoubi Suanjing*, *Shoushi Li*), geography & natural history (*Shanhaijing*, *Shui Jing Zhu*, *Xu Xiake Youji*), and arts of living (*Chajing*, *Yuan Ye*). **Artifact Gallery** groups 48 representative objects by book with gongbi-style illustrations; **Craft Cases** ask why movable-type printing never took off in China, why Li Shizhen spent 27 years rewriting the materia medica; **Ge Wu Wen Dian** gives you sourced clues and open questions to reach your own verdict.
+
+![Natural Sciences](docs/demo/module-gewu.gif)
+
+---
+
+## ✨ What makes this project different
+
+**🗡️ Four parallel threads, not four isolated pages**
+An emperor's decision, a thinker's response, a poet's line written in exile, and a craftsman's invention are four facets of the same era. Traditional history sites cover only emperors; this one lets you see how power, thought, aesthetics, and technology shaped one another.
+
+**🗺️ History on a map, not in text**
+A zoomable Leaflet basemap overlays borders and ancient places. The Jingnan campaign, Zheng He's seven voyages, and the Qing entry into Shanhai Pass unfold as timed animations rather than a static image; click any ancient place for its modern equivalent (e.g. Muzhou ≈ modern Jiande, Zhejiang).
+
+**📂 Deep-read case files, not encyclopedia entries**
+Famous mysteries are broken into eight sections: naming → background → people → course → outcome → impact → open debate → sources. You get a complete chain of reasoning, not a one-line "X happened in year Y."
+
+**📝 132 critical questions, not true/false**
+132 multiple-choice questions site-wide: 77 in Emperor Lineage (one per emperor) plus 41 across Thought Origins and Poetry Appreciation, plus 14 in Natural Sciences. Two modes — **evaluative judgment** ("How do you assess this policy?") and **causal chains** ("Why did this happen? What was the direct cause?"). Answers are graded instantly with explanations; some are open-ended and can be reviewed by an optional AI tutor.
+
+**🔍 Traceable claims, fiction separated from history**
+Timeline entries and detective clues cite the *Old/New Book of Tang*, *History of Song*, *History of Ming*, and more; fiction and lore are labeled separately as "popular tale, not in official histories," so you never mistake *Romance of the Three Kingdoms* for the record.
+
+**🖼️ Artifact gallery, not empty prose**
+48 ancient objects — from the Simuwu Ding and inlaid bronze square stand to Jingdezhen blue-and-white porcelain and Lu Yu's 24-piece tea set — each with a gongbi-style illustration, grouped by book, click to zoom for detail.
+
+**⚡ Zero dependencies, open and use**
+Pure vanilla HTML / CSS / JS — no build, no framework, no backend. Everything under `data/` is readable, editable JSON; no `npm install`, no database.
+
+**🤖 Bring your own AI tutor, data stays local**
+A built-in OpenAI-compatible endpoint (DeepSeek / OpenAI / etc.) stores config only in `web/llm-config.json` (git-ignored); your questions and answers never leave your machine.
+
+---
+
+## 🧭 How to learn with it
+
+| Direction | What you can do |
+| :--- | :--- |
+| Build the big frame | Read the emperor rail across seven dynasties to fix "Tang → Five Dynasties → Song" |
+| Understand key figures | Open any emperor for the relationship graph (ministers, consorts, rivals) |
+| Follow major events | Filter the map by era and watch a battle or coup unfold from start to finish |
+| Trace intellectual currents | From Kong-Meng to Zhu-Wang, see how Confucianism, Buddhism, and Daoism interacted |
+| Read poetry in context | See a poet's life journey, then read the verse written at that exact moment |
+| Follow science & craft | From bronze alloys in *Kao Gong Ji* to papermaking in *Tiangong Kaiwu*, watch how craft evolved |
+| Train critical thinking | Each question tests both "how do you judge this?" and "what is the causal chain?" |
+| Ancient ↔ modern places | Click an ancient place to see its modern location (e.g. Muzhou ≈ Jiande, Zhejiang) |
+
+---
+
+## 🚀 Quick start
+
+**Requirement:** Node.js 18+ (built-in `fetch`; no `npm install` needed).
+
+```bash
+git clone git@gitee.com:chen_ye_code/chinese-history-atlas.git
+cd chinese-history-atlas
+node web/serve.mjs
+# Then open http://127.0.0.1:5173/web/ in your browser
+```
+
+💡 **Port in use:** run `node web/serve.mjs 8080` to switch ports.
+
+⚠️ **Open it through the local server, not by double-clicking the HTML:** the frontend reads `data/*.json` via `fetch`, and the `file://` protocol is blocked by the browser's CORS policy, leaving the page blank.
+
+**Optional · AI tutor:** open "🤖 AI Tutor config" at the bottom of the History Detective page and enter an OpenAI-compatible endpoint, key, and model (click ⬇ to fetch the model list automatically). Config lives only in `web/llm-config.json` (git-ignored); a commented `web/llm-config.json.template` is included — copy it to `llm-config.json` and fill it in.
+
+---
+
+## 🏗️ Project structure
+
+```text
+chinese-history-atlas/
+├── data/                  # Knowledge layer (readable, editable JSON)
+│   ├── sui/ tang/ wudai/ song/ yuan/ ming/ qing/   # Seven dynasties
+│   │   ├── emperors/      # Emperor cards (life, timeline, people, fun facts)
+│   │   ├── events/        # Major events
+│   │   ├── cases/         # Case-file mysteries
+│   │   ├── places/        # Ancient places (modern equivalents, lat/lng)
+│   │   ├── routes/        # Campaign / voyage routes
+│   │   ├── quiz.json      # Quiz question bank
+│   │   └── people.json    # Key figure biographies
+│   ├── ru/ dao/ fo/ zhuzi/ lixue/ shiwen/ gewu/    # Seven schools of Chinese thought
+│   │   └── index.json     # Classics, cases, critical questions
+│   ├── boundaries/        # Dynasty territory GeoJSON
+│   ├── portraits/         # Portraits and artifact illustrations
+│   └── schema/ sources/   # Data schema and source citations
+├── web/                   # Frontend: vanilla HTML/CSS/JS
+│   ├── index.html         # Emperor Lineage main page
+│   ├── guoxue/            # Thought Origins + Poetry Appreciation + Natural Sciences
+│   ├── tools/             # Quiz generation and validation scripts
+│   └── vendor/            # Leaflet vendored locally, no CDN
+├── scripts/               # Validators and maintenance scripts
+└── docs/                  # Architecture / content guidelines / demos
+```
+
+---
+
+## 📊 Data scale
+
+| Module | Content |
+| :--- | :--- |
+| 🏮 Emperor Lineage | 7 dynasties · 77 emperors · 77 quiz questions · 557 timeline entries · 36 cases |
+| 📚 Thought Origins | 5 schools (Confucian / Daoist / Buddhist / Hundred / Song-Ming Neo-Confucian) · 27 classic texts · 28 cases |
+| 🎋 Poetry Appreciation | 22 poets · organized by dynasty · poetry journey maps · 13 cases |
+| 🧭 Natural Sciences | 18 scientific classics · 48 artifacts · 12 craft cases · 14 critical questions |
+
+*Territory outlines are simplified sketches based on Tan Qixiang's Historical Atlas of China; portraits and artifact illustrations are AI-generated gongbi-style images.*
+
+---
+
+## 📖 Content guidelines
+
+- **Sources first:** include only what the record supports; mark gaps as "no reliable record"; label fiction and lore as "popular tale, not in official histories."
+- **Plain language:** short sentences; explain proper nouns on first mention (e.g. "the Sixteen Prefectures, roughly modern Beijing, Tianjin, and northern Hebei/Shanxi").
+- **Learner in charge:** open questions have no single answer — leave room to think before presenting the consensus; correct options are shuffled to prevent positional guessing.
+- **Neutral stance:** take no sides and romanticize nothing; present multiple perspectives on controversies and let learners judge.
+
+---
+
+## 📄 License
+
+[MIT License](LICENSE) © chen_ye_code
+
+Content draws mainly from the official histories (*Book of Sui*, *Old/New Book of Tang*, *History of Song*, *History of Yuan*, *History of Ming*, *Draft History of Qing*, etc.). Territory outlines are hand-drawn simplified sketches, not precise boundaries. Portraits and artifact illustrations are AI-generated gongbi-style stylized images, not true historical likenesses. Map tiles © their respective providers; Leaflet © Leaflet Contributors.

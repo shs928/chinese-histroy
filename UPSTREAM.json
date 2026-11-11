@@ -1,0 +1,5 @@
+{
+  "atlas": {"repository":"https://github.com/zinging/chinese-history-atlas","commit":"ee64191d4b08e35251a4a38dbd80c6c542659f8e","license":"MIT"},
+  "map": {"repository":"https://github.com/DeanChensj/jiangshan-map","commit":"dbee605562dd87048c61218b2938bb7c6ffa792e","license":"GPL-3.0","excluded":"CHGIS / Hartwell prefecture geometries, including aliases and unused rings"},
+  "integrationDate":"2026-11-11"
+}

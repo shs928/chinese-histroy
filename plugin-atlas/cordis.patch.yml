@@ -1,0 +1,29 @@
+# 中华历史图谱 · DSH 连接器（MCP bundle）
+#
+# 目标：往 preset-standard 的 delegation group 追加一条 MCP 连接器，
+# 让「标准模式」里出现 mcp__atlas__* 工具，同时不重述整个标准预设
+# （重述会因官方升级而落后；漏一个插件就等于删掉那条工具）。
+#
+# 路径不写死任何绝对值，全部在加载时算出：
+#   ctx.baseUrl = 「加载本 patch 的文件」的 URL，即 <pkg>/cordis.patch.yml。
+#   new URL('./server.mjs', ctx.baseUrl) 保留目录段 → <pkg>/server.mjs。
+#   DSH 的 mcp-client 把 args 原样交给 child_process.spawn，cwd 不设时继承
+#   父进程目录（不可预测），所以这里必须给出确定路径。
+#
+# 注意：!!js 在 new Function('ctx','expr','with(ctx){...}') 里求值，
+# 拿不到 require / node:path / fileURLToPath，只能用 ctx 属性与运行时全局，
+# 因此下面用 URL 构造 + pathname 解码做纯字符串运算
+# （Windows 的 pathname 会带前导 /，正则把它去掉以还原 C:/... ）。
+- id: delegation
+  insert:
+    - id: chinese-history-atlas
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: atlas
+        transport: stdio
+        command: node
+        args:
+          - !!js "decodeURIComponent(new URL('./server.mjs', ctx.baseUrl).pathname.replace(/^\\/(?:([A-Za-z]:))/, '$1'))"
+        env:
+          CHAT_BASE_URL: 'http://127.0.0.1:5173/web/'
+        cwd: !!js "decodeURIComponent(new URL('.', ctx.baseUrl).pathname.replace(/\\/$/, '').replace(/^\\/(?:([A-Za-z]:))/, '$1'))"

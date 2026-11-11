@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>格物致知 · Chinese Science & Crafts</title>
+<link rel="stylesheet" href="style.css?v=v67">
+<link rel="stylesheet" href="../hub-theme.css?v=1"><script src="../hub-theme.js?v=1"></script></head>
+<body data-sect="gewu">
+<div id="global-loader">
+  <div class="gl-spinner"></div>
+  <div class="gl-text">正在加载<span class="gl-dots"></span></div>
+</div>
+<div id="app">
+  <div class="brand">格物致知</div>
+  <div class="sect-switch" id="era-switch" role="tablist" aria-label="分类切换">
+    <button class="sect-btn active" data-era="all"><span class="sect-main">全部</span><span class="sect-sub"></span></button>
+  </div>
+
+  <nav class="tabs-v" id="tabs">
+    <button class="tab active" data-page="books">格致典籍</button>
+    <button class="tab" data-page="cases">工艺公案</button>
+    <button class="tab" data-page="artifacts">器物图谱</button>
+    <button class="tab" data-page="quiz">格物问典</button>
+  </nav>
+
+  <!-- 模块一：格致典籍 -->
+  <main id="page-books" class="page">
+    <div class="books-scroll" id="books-scroll"></div>
+    <div id="book-detail" class="book-detail hidden"></div>
+  </main>
+
+  <!-- 模块二：工艺公案 -->
+  <main id="page-cases" class="page hidden">
+    <div id="case-tabs" class="case-tabs"></div>
+    <div id="cases-list" class="cases-list"></div>
+  </main>
+
+  <!-- 模块三：器物图谱（百工图鉴） -->
+  <main id="page-artifacts" class="page hidden">
+    <div class="book-filter" id="book-filter"></div>
+    <div class="artifacts-grid" id="artifacts-grid"></div>
+  </main>
+
+  <!-- 模块四：格物问典 -->
+  <main id="page-quiz" class="page hidden">
+    <div id="quiz-list" class="quiz-list"></div>
+  </main>
+
+  <footer class="footer" id="footer">内容以《考工记》《天工开物》《本草纲目》《梦溪笔谈》等原典为依据 · 器物图鉴为示意 · 人物画像 AI 生成古风</footer>
+</div>
+
+<script src="app.js?v=v221"></script>
+<script src="../guide-highlight.js?v=gh8"></script>
+</body>
+</html>
+
