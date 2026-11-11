@@ -198,6 +198,9 @@ body.hub-jiangshan { background: var(--bg) !important; }
   .explore-map-card { padding: 20px; }
   .section-aside { display: none; }
 }
+@media (max-width: 1024px) {
+  .hub-topbar #hub-search { display: none; }
+}
 @media (max-width: 860px) {
   :root { --sidebar-w: 190px; }
   .mega-sidebar { padding-left: 12px; padding-right: 12px; }
